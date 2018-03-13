@@ -12,6 +12,7 @@ export default class App extends React.Component {
         return (
             <View style={styles.container}>
                 <ColorView></ColorView>
+                <ColorView></ColorView>
             </View>
         );
     }

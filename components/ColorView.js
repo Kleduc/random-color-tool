@@ -6,7 +6,8 @@ import {
     Button,
     Image,
     TouchableOpacity,
-    Dimensions
+    Dimensions,
+    Clipboard
 } from 'react-native';
 import moment from 'moment';
 
@@ -24,7 +25,9 @@ export default class App extends React.Component {
         var ColorCode = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.random().toFixed(2)) + ')';
 
         this.setState({ColorHolder: ColorCode});
+        Clipboard.setString(ColorCode);
         console.log("ColorCode", ColorCode);
+        console.log("Clipboard",Clipboard.getString());
     }
 
     render() {

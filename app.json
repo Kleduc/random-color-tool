@@ -1,15 +1,16 @@
 {
     "expo": {
-        "name": "Random Color Picker",
+        "name": "Random Color Tool",
         "version": "3.0.0",
         "slug": "randomcolor",
         "sdkVersion": "25.0.0",
+        "icon": "./components/appicon.png",
         "ios": {
-            "bundleIdentifier": "com.kleducapps.randomcolorpicker",
+            "bundleIdentifier": "com.kleducapps.randomcolortool",
         },
         "android": {
             "versionCode" : 3,
-            "package": "com.kleducapps.randomcolorpicker"
+            "package": "com.kleducapps.randomcolortool"
         },
         "splash": {
             "image": "./components/logo.png",

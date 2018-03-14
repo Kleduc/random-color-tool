@@ -6,11 +6,11 @@
         "sdkVersion": "25.0.0",
         "icon": "./components/appicon.png",
         "ios": {
-            "bundleIdentifier": "com.kleducapps.randomcolortool",
+            "bundleIdentifier": "com.kleducapps.randomcolorpicker",
         },
         "android": {
-            "versionCode" : 3,
-            "package": "com.kleducapps.randomcolortool"
+            "versionCode" : 4,
+            "package": "com.kleducapps.randomcolorpicker"
         },
         "splash": {
             "image": "./components/logo.png",

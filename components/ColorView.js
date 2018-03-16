@@ -9,43 +9,39 @@ import {
     Dimensions,
     Clipboard
 } from 'react-native';
-import moment from 'moment';
 
 export default class App extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            ColorHolder: 'rgba(255,255,255,1.00)'
+            colorHolder: 'rgba(255,255,255,1.00)'
         };
     }
 
-    ChangeColorFunction = () => {
+    changeColorFunction = () => {
 
-        var ColorCode = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.random().toFixed(2)) + ')';
+        var colorCode = 'rgba(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.random().toFixed(2)) + ')';
 
-        this.setState({ColorHolder: ColorCode});
-        Clipboard.setString(ColorCode);
-        console.log("ColorCode", ColorCode);
+        this.setState({colorHolder: colorCode});
+        Clipboard.setString(colorCode);
+        console.log("colorCode", colorCode);
         console.log("Clipboard",Clipboard.getString());
     }
 
     render() {
 
-        const date = new Date();
-        const formattedDate = moment(date).format('MMMM Do YYYY, h:mm');
-
         return (
             <View style={[
                 styles.mainContainer, {
-                    backgroundColor: this.state.ColorHolder
+                    backgroundColor: this.state.colorHolder
                 }
             ]}>
-                <TouchableOpacity title="Change View Background Color" onPress={this.ChangeColorFunction}>
-                    <Image style={[styles.socialIcons]} source={require('./paintroller.png')}/>
+                <TouchableOpacity onPress={this.changeColorFunction}>
+                    <Image source={require('./paintroller.png')}/>
                 </TouchableOpacity>
                 <Text style={styles.colorHolderText}>
-                    <Text>{this.state.ColorHolder}</Text>
+                    <Text>{this.state.colorHolder}</Text>
                 </Text>
             </View>
         );
